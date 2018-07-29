@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+        .inte{
+            font-size:.22rem;
+            padding:.1rem;
+            border:1px solid #5a5c6b;
+        }
+        .num_input,select{
+            width:1.6rem;
+            font-size: .14rem;
+            border:1px solid #5a90c1;
+            padding:.08rem;
+            color: #999;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            background: #fff;
+        }
+        .menber{
+            border-radius: 4px;
+            width:2.8rem;
+            margin:.2rem auto;
+            background: #fff;
+            padding-bottom:.1rem;
+            
+        }
+        .m_container dt{
+            width:.8rem;
+            font-size:.13rem;
+            text-align: right;
+        }
+        .m_container dd span{
+            color: #dc6263;
+        }
+        .m_top{
+            background: #64a0d7;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            font-size:.18rem!important;
+            padding:.1rem 0;
+            font-weight: 600;
+            color: #fff!important;
+            text-align: center!important;
+        }
+        .btn_conf{
+            width:1.4rem;
+            text-align: center;
+            color: #fff;
+            height:.37rem;
+            line-height:.37rem;
+            font-size: .15rem;
+            font-weight:600;
+            background: #00aced;
+            text-decoration: none;
+            display: block;
+            margin:.2rem auto .1rem auto;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 4px;
+            letter-spacing: 1px;
+        }
+        .myteam{
+            border-radius: 4px;
+            width:2.8rem;
+            margin:.4rem auto .2rem auto;
+            background: #00aced;
+            text-align: center;
+            padding:.05rem 0;
+            color: #fff;
+        }
+        .zhe{
+            position: fixed;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .goods_inf{
+            position: fixed;
+            background: #fff;
+            width:70%;
+            top:1rem;
+            left:15%;
+            border-radius:4px;
+        }
+        .good_top{
+            display: flex;
+            justify-content: flex-start;
+            padding:.07rem .3rem;
+            border-bottom:1px solid #efefef;
+        }
+        .goods_inf p{
+            color: #333;
+            text-align: left;
+            font-size:.12rem;
+        }
+        .good_fin p{
+            font-weight: 600;
+            font-size:.11rem;
+        }
+        .canel{
+            background: #00acee;
+            width:1.3rem;
+            height:.32rem;
+            line-height:.32rem;
+            color: #fff;
+            text-align: center;
+            font-size:.17rem;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            margin:.1rem auto .05rem auto;
+            letter-spacing:1px;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+</header>
+<!--查看弹出框-->
+<div class="t">
+    <div class="zhe"></div>
+    <div class="goods_inf">
+        <p class="m_top">注册成功！</p>
+        <div class="good_top">
+            会员姓名：梁大茹<br>手机号：18663355489
+        </div>
+        <div class="good_top">
+            会员账号：DC32342<br>登陆密码：24！！！
+        </div>
+        <div class="good_top" style="border: none;color: #dc6263;">
+            请务必牢记，并提示会员修改密码
+        </div>
+        <div class="canel">返回</div>
+    </div>
+</div>
+<section>
+    <p class="inte">激活码：0</p>
+    <div class="menber">
+        <p class="m_top">注册会员</p>
+        <div class="m_container">
+            <dl>
+                <dt>姓名：</dt>
+                <dd><input type="text" class="num_input"></dd>
+            </dl>
+            <dl>
+                <dt>手机号：</dt>
+                <dd><input type="number" class="num_input"></dd>
+            </dl>
+            <dl>
+                <dt>收款机构：</dt>
+                <dd><input type="text" class="num_input"></dd>
+            </dl>
+            <dl>
+                <dt>收款账号：</dt>
+                <dd><select class="num_input" style="width: 1.78rem;">
+                    <option>支付宝</option>
+                    <option>微信支付</option>
+                </select></dd>
+            </dl>
+            <dl>
+                <dt style="vertical-align: top">地址：</dt>
+                <dd><textarea class="num_input" style="height: .7rem;"></textarea></dd>
+            </dl>
+            <dl>
+                <dt></dt>
+                <dd>注册需要消耗<span>1</span>个激活码<br>您的激活码不足 </dd>
+            </dl>
+        </div>
+        <div class="btn_conf">确定注册</div>
+    </div>
+
+    <div class="myteam">我的团队：1325 </div>
+</section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    var canel = document.querySelector('.canel');
+    canel.onclick = function(){
+        document.querySelector('.t').style.display = 'none';
+    }
+</script>
+</html>

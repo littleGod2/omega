@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+        .inte{
+            font-size:.22rem;
+            padding:.1rem;
+            border:1px solid #5a5c6b;
+        }
+        .dui_list{
+            min-height:3rem;
+        }
+        .dui_title{
+            font-size:.18rem;
+            font-weight:600;
+            text-align: left;
+            margin:.15rem;
+        }
+        .table{
+            width:2.9rem;
+            margin:.1rem auto;
+            font-size:.1rem;
+            color: #fff;
+            -webkit-box-shadow:0 10px 30px #2c2d3c;
+            -moz-box-shadow:0 10px 30px #2c2d3c;
+            box-shadow:0 10px 30px #2c2d3c;
+        }
+        .table th{
+            border-left:1px solid #8285a0;
+            padding:.05rem;
+        }
+        .table th:first-child{
+            border-left:none;
+        }
+        .table td{
+            text-align: center;
+            border-left:1px solid #8285a0;
+            border-top:1px solid #8285a0;
+            padding:.02rem .01rem;
+        }
+        .table td:first-child{
+            border-left:none;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+</header>
+<section>
+    <p class="inte">持有欧米伽基金：31553.43</p>
+    <p class="dui_title">我的配套</p>
+    <section class="dui_list">
+        <table class="table" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>订单</th>
+                <th>日期</th>
+                <th>持有欧米<br>伽基金</th>
+                <th>当前<br>释放比例</th>
+                <th>已释放</th>
+            </tr>
+            <tr>
+                <td>5232 </td>
+                <td>2017.10.30 </td>
+                <td>€16000</td>
+                <td>2%</td>
+                <td>€0</td>
+            </tr>
+            <tr>
+                <td>2316 </td>
+                <td>2017.6.30 </td>
+                <td>€6656.79 </td>
+                <td>8.08%   </td>
+                <td>€1343.21 </td>
+            </tr>
+        </table>
+        <ul class="page" style="margin: .2rem 0">
+            <li><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+            <li><a href="" class="active">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li>...</li>
+            <li><a href="">20</a></li>
+            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+        </ul>
+    </section>
+
+    <p class="rate" style="margin-top: .2rem;">今日汇率:<span>1:7.79</span></p>
+</section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    var tr = document.getElementsByTagName('tr')
+    for(var i=0;i<tr.length;i++){
+        if(i%2==0){
+            tr[i].style.background='#272836'
+        }
+    }
+</script>
+</html>

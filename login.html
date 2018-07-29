@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<header>
+			<span class="back"><img src="img/back.png" alt="" />
+			</span><span class="title">欧米伽资本</span>
+		</header>
+		<section class="container">
+			<form action="">
+				<div class="company">
+					<div class="logo"><img src="img/logo.gif" alt="" /></div>
+					<div>
+						<p class="name">欧米伽资产</p>
+						<p class="eng">OMEGA FINANCE</p>
+					</div>
+				</div>
+				<div class="l_title">登录</div>
+				<ul class="deng">
+					<li>
+						<div class="deng_icon"><img src="img/icon_user.gif" alt=""></div>
+						<div class="write"><input type="text" name="userid" class="input userid" placeholder="用户名/手机号"></div>
+						<div class="yan">获取验证码</div>
+					</li>
+					<li>
+						<div class="deng_icon"><img src="img/icon_pass.gif" alt=""></div>
+						<div class="write"><input type="text" name="password" class="input password" placeholder="密码"></div>
+					</li>
+					<li>
+						<div class="deng_icon"><img src="img/icon_prote.gif" alt=""></div>
+						<div class="write"><input type="text" name="yan" class="input yanzheng" placeholder="验证码"></div>
+					</li>
+				</ul>
+				<div class="forget">忘记密码？</div>
+				<button class="deng_btn" type="submit" onclick="valuate()">登录</button>
+			</form>
+		</section>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script>
+		function valuate(){
+		    if(document.querySelector('.userid').value==""){
+		        alert("请输入用户名/手机号~")
+			}else if(document.querySelector('.password').value==""){
+                alert("请输入密码~")
+            }else if(document.querySelector('.yanzheng').value==""){
+                alert("请输入验证码~")
+            }
+		}
+	</script>
+</html>

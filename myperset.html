@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+        .dui_title{
+            font-size:.15rem;
+            text-align: left;
+            margin:.14rem;
+        }
+        .dui_title span{
+            font-size:.16rem;
+            font-weight:600;
+            display: inline-block;
+            margin-bottom:.1rem;
+        }
+        .table{
+            width:2.9rem;
+            margin:.1rem auto;
+            font-size:.1rem;
+            color: #fff;
+            -webkit-box-shadow:0 10px 30px #2c2d3c;
+            -moz-box-shadow:0 10px 30px #2c2d3c;
+            box-shadow:0 10px 30px #2c2d3c;
+        }
+        .table th{
+            border-left:1px solid #595b6c;
+            padding:.05rem;
+        }
+        .table th:first-child{
+            border-left:none;
+        }
+        .table td{
+            text-align: center;
+            border-left:1px solid #595b6c;
+            border-top:1px solid #595b6c;
+            padding:.02rem .01rem;
+        }
+        .table td:first-child{
+            border-left:none;
+        }
+        .myomeg{
+            border-top:1px solid #595b6c;
+            border-bottom:1px solid #595b6c;
+            font-size:.14rem;
+            padding:.15rem;
+            letter-spacing:1px;
+            color: #fff;
+        }
+        .mari{
+            padding:.15rem;
+            border-bottom:1px solid #595b6c;
+            margin-bottom:.2rem;
+        }
+        .mai_input{
+            width:1.5rem;
+            font-size: .14rem;
+            border:1px solid #5a90c1;
+            padding:.08rem;
+            color: #999;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            background: #383a4c;
+        }
+        .max{
+            color: #dc6263;
+            font-size:.13rem;
+            margin-left:.1rem;
+        }
+        .btn_m{
+            display: flex;
+            justify-content: space-around;
+            padding:.01rem .1rem;
+        }
+        .btn_m>a{
+            display: block;
+            width:1.1rem;
+            height:.26rem;
+            line-height:.26rem;
+            text-align: center;
+            background: #48b32f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size:.13rem;
+            letter-spacing: 1px;
+            font-weight:600;
+        }
+        .sh_mon{
+            padding: .07rem 0 .1rem 0;
+            text-align: left;
+            font-size:.12rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+</header>
+<section>
+    <p class="dui_title"><span>我的配套</span><br>我持有的欧米伽：1354.24  </p>
+    <div class="myomeg">可以申请兑汇<br>手续费10%，最低 €10<br>到账时间视银行而定</div>
+    <div class="mari">
+        <input type="text" class="mai_input" placeholder="请输入兑汇金额">
+        <span class="max">MAX</span>
+        <p class="sh_mon">手续费 €1.2735<br>预计到账￥9433.36 </p>
+        <div class="btn_m">
+            <a href="" class="appl">申请兑汇 </a>
+            <a href="" class="update" style="background: #00acee;">修改收款资料 </a>
+        </div>
+    </div>
+    <section class="dui_list">
+        <table class="table" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>日期</th>
+                <th>申请金额 </th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            <tr>
+                <td>2017.11.12<br>17:30 </td>
+                <td>1135.37</td>
+                <td>待处理</td>
+                <td><a href="" class="t_look">查看</a></td>
+            </tr>
+            <tr>
+                <td>2017.11.12<br>17:30 </td>
+                <td>2</td>
+                <td>收款人错误</td>
+                <td><a href="" class="t_look">查看</a></td>
+            </tr>
+            <tr>
+                <td>2017.11.12<br>17:30 </td>
+                <td>2</td>
+                <td>待付款</td>
+                <td><a href="" class="t_look">查看</a></td>
+            </tr>
+        </table>
+        <!--<ul class="page" style="margin: .2rem 0">-->
+            <!--<li><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>-->
+            <!--<li><a href="" class="active">1</a></li>-->
+            <!--<li><a href="">2</a></li>-->
+            <!--<li><a href="">3</a></li>-->
+            <!--<li><a href="">4</a></li>-->
+            <!--<li>...</li>-->
+            <!--<li><a href="">20</a></li>-->
+            <!--<li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>-->
+        <!--</ul>-->
+    </section>
+
+    <p class="rate" style="margin-top: .2rem;">今日汇率:<span>1:7.79</span></p>
+</section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    var tr = document.getElementsByTagName('tr')
+    for(var i=0;i<tr.length;i++){
+        if(i%2==0){
+            tr[i].style.background='#272836'
+        }
+    }
+</script>
+</html>

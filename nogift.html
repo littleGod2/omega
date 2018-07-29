@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+        .inte{
+            font-size:.22rem;
+            padding:.1rem;
+            border:1px solid #5a5c6b;
+        }
+        .ic_if{
+            width:.6rem;
+            margin: .4rem auto .15rem auto;
+
+        }
+        .ic_text{
+            font-weight:600;
+            font-size:.19rem;
+            text-align: center;
+            line-height:.28rem;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+</header>
+<section>
+    <p class="inte">置礼积分：223</p>
+    <section>
+        <div class="ic_if"><img src="img/sorry.png" alt=""></div>
+        <p class="ic_text">抱歉，近期暂无礼品<br>请关注首页公告。</p>
+    </section>
+</section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    var tr = document.getElementsByTagName('tr')
+    for(var i=0;i<tr.length;i++){
+        if(i%2==0){
+            tr[i].style.background='#272836'
+        }
+    }
+</script>
+</html>

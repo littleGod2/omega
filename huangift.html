@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+
+        .inte{
+            font-size:.22rem;
+            padding:.1rem;
+            border:1px solid #5a5c6b;
+        }
+        .jiang{
+            margin:.15rem;
+        }
+        .jiang li{
+            margin-bottom:.15rem;
+        }
+        .jiang_top{
+            color: #fff;
+            background: #64a0d7;
+            font-size:.17rem;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding:.06rem;
+        }
+        .goods{
+            display: flex;
+            justify-content: space-between;
+            padding:.1rem .15rem;
+            align-items: flex-start;
+            background: #fff;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .goods p{
+            color: #333;
+            text-align: left;
+            font-size:.1rem;
+            font-weight:500;
+        }
+        .g_info p span{
+            color: #dc6263;
+        }
+        .noenj{
+            font-size: .09rem;
+            color: #dc6263!important;
+        }
+        .g_img{
+            width:.3rem;
+        }
+        .num_input{
+            width:.4rem;
+            border:1px solid #64a0d7;
+        }
+        .dh{
+            background: #48b32f;
+            color: #ffffff;
+            padding:.01rem .1rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+            font-size: .11rem;
+            border-radius:2px;
+        }
+        .doit p{
+            text-align: right;
+        }
+        .g_info{
+            width:1.3rem;
+        }
+        .goods_inf{
+            position: fixed;
+            background: #fff;
+            width:70%;
+            top:1rem;
+            left:15%;
+            border-radius:4px;
+            z-index: 10;
+        }
+        .good_top{
+            display: flex;
+            justify-content: flex-start;
+            padding:.07rem .3rem;
+            border-bottom:1px solid #efefef;
+        }
+        .good_img{
+            width:.36rem;
+            margin-right:.1rem;
+        }
+        .goods_inf p{
+            color: #333;
+            text-align: left;
+            font-size:.12rem;
+        }
+        .good_fin p{
+            font-weight: 600;
+            font-size:.11rem;
+        }
+        .order_inf{
+            padding:.07rem .2rem .07rem .3rem;
+            position: relative;
+        }
+        .btm{
+            display: flex;
+            justify-content: space-around;
+            padding:.09rem .09rem .02rem .09rem;
+        }
+        .btm>div{
+            padding:.03rem .2rem;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            background: #00acee;
+            color: #fff;
+        }
+        .cha{
+            display: inline-block;
+            margin-top:.07rem;
+            background: #64a0d7;
+            color: #fff;
+            text-decoration: none;
+            padding:.02rem .1rem .04rem .1rem;
+            font-size: .12rem;
+        }
+        .confirm{
+            background:#48b32f!important;
+        }
+        .zhe{
+            position: fixed;
+            width:100%;
+            height:100%;
+            background: rgba(0,0,0,0.5);
+        }
+        .goods_inf .jiang_top{
+            font-size: .17rem;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+    </header>
+    <!--弹出框-->
+    <div class="t">
+        <div class="zhe"></div>
+        <div class="goods_inf">
+            <p class="jiang_top">兑换iphoneX</p>
+            <div class="good_top">
+                <div class="good_img"><img src="img/g_img.png" alt=""></div>
+                <div class="good_fin">
+                    <p>白色<br>256G<br>每人限兑1份<br>需要置礼积分：<span>200</span></p>
+                </div>
+            </div>
+            <div class="order_inf">
+                <p class="or_i">
+                    为确保送达，请验证收货地址：<br>姓名：江XX<br>联系方式：13889988899<br>地址：北京市海淀区南山路87号
+                </p>
+                <a href="" class="cha">修改地址</a>
+                <div class="btm">
+                    <div class="canel">返回</div>
+                    <div class="confirm">确认</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <p class="inte">置礼积分：223</p>
+        <ul class="jiang">
+            <li>
+                <p class="jiang_top">兑换iphoneX</p>
+                <div class="goods">
+                    <div class="g_img"><img src="img/g_img.png" alt=""></div>
+                    <div class="g_info">
+                        <p>白色</p>
+                        <p>256G</p>
+                        <p>每人限兑1份</p>
+                        <p>需要置礼积分：<span>200</span></p>
+                    </div>
+                    <div class="doit">
+                        <p><span>兑换数：</span><input type="text" class="num_input"></p>
+                        <p style="margin-top:.1rem;"><a href="" class="dh">兑换</a></p>
+                        <p class="noenj">您的置礼积分不足</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="jiang_top">兑换iphoneX</p>
+                <div class="goods">
+                    <div class="g_img"><img src="img/g_img.png" alt=""></div>
+                    <div class="g_info">
+                        <p>白色</p>
+                        <p>256G</p>
+                        <p>每人限兑1份</p>
+                        <p>需要置礼积分：<span>200</span></p>
+                    </div>
+                    <div class="doit">
+                        <p><span>兑换数：</span><input type="text" class="num_input"></p>
+                        <p style="margin-top:.1rem;"><a href="" class="dh">兑换</a></p>
+                        <p class="noenj">您的置礼积分不足</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="jiang_top">兑换iphoneX</p>
+                <div class="goods">
+                    <div class="g_img"><img src="img/g_img.png" alt=""></div>
+                    <div class="g_info">
+                        <p>白色</p>
+                        <p>256G</p>
+                        <p>每人限兑1份</p>
+                        <p>需要置礼积分：<span>200</span></p>
+                    </div>
+                    <div class="doit">
+                        <p><span>兑换数：</span><input type="text" class="num_input"></p>
+                        <p style="margin-top:.1rem;"><a href="" class="dh">兑换</a></p>
+                        <p class="noenj">您的置礼积分不足</p>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <p class="jiang_top">兑换iphoneX</p>
+                <div class="goods">
+                    <div class="g_img"><img src="img/g_img.png" alt=""></div>
+                    <div class="g_info">
+                        <p>白色</p>
+                        <p>256G</p>
+                        <p>每人限兑1份</p>
+                        <p>需要置礼积分：<span>200</span></p>
+                    </div>
+                    <div class="doit">
+                        <p><span>兑换数：</span><input type="text" class="num_input"></p>
+                        <p style="margin-top:.1rem;"><a href="" class="dh">兑换</a></p>
+                        <p class="noenj">您的置礼积分不足</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <ul class="page">
+            <li><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+            <li><a href="" class="active">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li>...</li>
+            <li><a href="">20</a></li>
+            <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+        </ul>
+
+
+    </section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    var canel = document.querySelector('.canel');
+    canel.onclick = function(){
+        document.querySelector('.t').style.display = 'none';
+    }
+</script>
+</html>

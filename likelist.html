@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+
+        .inte{
+            font-size:.22rem;
+            padding:.1rem;
+            border:1px solid #5a5c6b;
+        }
+        .jiang{
+            margin:.15rem .15rem 0 .15rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .jiang li{
+            margin-bottom:.15rem;
+            width:49.4%;
+        }
+        .jiang_top{
+            color: #fff;
+            background: #64a0d7;
+            font-size:.15rem;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding:.06rem;
+        }
+        .jiang_top span{
+            margin-top:-.04rem;
+            display: block;
+            font-size:.18rem;
+            font-weight:600;
+            letter-spacing: 1px;
+        }
+        .goods p{
+            color: #333;
+            text-align: left;
+            font-size:.1rem;
+            font-weight:500;
+        }
+        .g_info p span{
+            color: #dc6263#dc6263;
+        }
+        .money_info{
+            background: #fff;
+            font-size:.11rem;
+            position: relative;
+            color: #333;
+        }
+        .b_r{
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+        }
+        .money_info>div{
+            padding:.06rem .12rem;
+            border-bottom:1px solid #ccc;
+        }
+        .money_info p{
+            color: #333;
+            text-align: left;
+            font-size:.1rem;
+            font-weight:500;
+
+        }
+        .more{
+            margin-top: .15rem;
+            font-size:.14rem;
+        }
+        .more span{
+            color: #dc6263;
+            margin-left:.1rem;
+        }
+        .dui_input{
+            width:.4rem;
+            border:1px solid #64a0d7;
+            border-radius: 2px;
+        }
+        .g_b{
+            width:1.2rem;
+            text-align: center;
+            color: #fff;
+            height:.25rem;
+            line-height:.25rem;
+            font-size: .12rem;
+            background: #48b32f;
+            text-decoration: none;
+            display: block;
+            margin:.1rem auto;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
+            letter-spacing: 1px;
+        }
+        .juan_no{
+            font-size:.09rem!important;
+        }
+        .money_info span{
+            color: #dc6263;
+        }
+        .dui_title{
+            font-size:.18rem;
+            font-weight:600;
+            text-align: left;
+            margin:0 .15rem;
+        }
+        .table{
+            width:2.9rem;
+            margin:.1rem auto;
+            font-size:.1rem;
+            color: #fff;
+            -webkit-box-shadow:0 10px 30px #2c2d3c;
+            -moz-box-shadow:0 10px 30px #2c2d3c;
+            box-shadow:0 10px 30px #2c2d3c;
+        }
+        .table th{
+            border-left:1px solid #8285a0;
+            padding:.05rem;
+        }
+        .table th:first-child{
+            border-left:none;
+        }
+        .table td{
+            text-align: center;
+            border-left:1px solid #8285a0;
+            border-top:1px solid #8285a0;
+            padding:.02rem .01rem;
+        }
+        .table td:first-child{
+            border-left:none;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+</header>
+<section>
+    <p class="inte">欧米伽配套券：50</p>
+    <ul class="jiang">
+        <li>
+            <p class="jiang_top">兑换欧米伽<span>标准配套</span></p>
+            <div class="money_info b_r">
+                <div>
+                    <p>价格1000欧<br>包含8000欧米伽基金<br>赠送500欧米伽证券<br>需要欧米伽配套券：<span>200</span> </p>
+                </div>
+                <div>
+                    <p class="dui_num">兑换份数：<input type="text" class="dui_input"></p>
+                </div>
+                <div class="b_r">
+                    <a href="" class="g_b">确定兑换</a>
+                    <p class="juan_no"><span>您的配套券不足！</span><br>(欧米伽配套券：50)</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <p class="jiang_top">兑换欧米伽<span>标准配套</span></p>
+            <div class="money_info b_r">
+                <div>
+                    <p>价格1000欧<br>包含8000欧米伽基金<br>赠送500欧米伽证券<br>需要欧米伽配套券：<span>200</span> </p>
+                </div>
+                <div>
+                    <p class="dui_num">兑换份数：<input type="text" class="dui_input"></p>
+                </div>
+                <div class="b_r">
+                    <a href="" class="g_b">确定兑换</a>
+                    <p class="juan_no"><span>您的配套券不足！</span><br>(欧米伽配套券：50)</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <p class="dui_title">兑换记录</p>
+    <section class="dui_list">
+        <table class="table" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <th>日期</th>
+                <th>兑换<br>份数</th>
+                <th>包含欧米<br>伽基金</th>
+                <th>赠送欧米<br>伽证券</th>
+                <th>状态</th>
+            </tr>
+            <tr>
+                <td>2017.11.12 </td>
+                <td>2</td>
+                <td>8000 </td>
+                <td>500 </td>
+                <td>兑换成功 </td>
+            </tr>
+            <tr>
+                <td>2017.11.12 </td>
+                <td>2</td>
+                <td>8000 </td>
+                <td>500 </td>
+                <td>兑换成功 </td>
+            </tr>
+            <tr>
+                <td>2017.11.12 </td>
+                <td>2</td>
+                <td>8000 </td>
+                <td>500 </td>
+                <td>兑换成功 </td>
+            </tr>
+        </table>
+    </section>
+    <ul class="page" style="margin: .2rem 0">
+        <li><a href=""><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+        <li><a href="" class="active">1</a></li>
+        <li><a href="">2</a></li>
+        <li><a href="">3</a></li>
+        <li><a href="">4</a></li>
+        <li>...</li>
+        <li><a href="">20</a></li>
+        <li><a href=""><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+    </ul>
+
+    <p class="rate" style="margin-top: .2rem;">今日汇率:<span>1:7.79</span></p>
+</section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script>
+    var tr = document.getElementsByTagName('tr')
+    for(var i=0;i<tr.length;i++){
+        if(i%2==0){
+            tr[i].style.background='#272836'
+        }
+    }
+</script>
+</html>

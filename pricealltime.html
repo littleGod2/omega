@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+		<style>
+			.container{
+				padding:0;
+				color: #fff;
+			}
+			.om_top{
+				padding:.2rem;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.omeg{
+				font-size:.18rem;
+			}
+			.lin_money{
+				font-size: .13rem;
+				padding-top:.03rem;
+			}
+			.lin_money span{
+				color: #dc6263;
+			}
+			.time{
+				display: flex;
+				justify-content: space-between;
+				padding:.1rem;
+				align-items: center;
+			}
+			.time .fa{
+				font-size:.12rem;
+			}
+			.showchart{
+				background: #272836;
+				margin:0 .15rem;
+			}
+			#myChart{
+				width: 100%!important;
+				margin:0;
+			}
+			.choicetime{
+				margin-top: .2rem;
+				background: #515368;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+			}
+			.choicetime li{
+				color: #8285a0;
+				text-align: center;
+				width:16.6%;
+				border-right:1px solid #484a5d;
+				font-size: .13rem;
+				height:.22rem;
+				line-height:.22rem;
+			}
+			.choicetime li.active{
+				color: #fff;
+				background: #5a90c1;
+			}
+			.myomeg{
+				margin-top:.2rem;
+				border-top:1px solid #595b6c;
+				border-bottom:1px solid #595b6c;
+				font-size:.16rem;
+				line-height:.25rem;
+				padding:.1rem .15rem;
+				letter-spacing:1px;
+			}
+			.mari{
+				padding:.15rem;
+			}
+			.mai_input{
+				width:1.5rem;
+				font-size: .14rem;
+				border:1px solid #5a90c1;
+				padding:.08rem;
+				color: #999;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				background: #383a4c;
+			}
+			.max{
+				color: #dc6263;
+				font-size:.13rem;
+				margin-left:.1rem;
+			}
+			.maiout{
+				display: inline-block;
+				padding:.05rem .4rem;
+				background: #48b32f;
+				color: #fff;
+				text-decoration: none;
+				border-radius: 4px;
+				font-size:.16rem;
+				letter-spacing: 1px;
+				font-weight:600;
+			}
+		</style>
+		<script src="js/chart.js"></script>
+	</head>
+	<body>
+		<header>
+			<span class="back"><img src="img/back.png" alt="" />
+			</span><span class="title">欧米伽资本</span>
+		</header>
+		<section class="container">
+			<div class="om_top">
+				<p class="omeg">欧米伽证券</p>
+				<div class="lin_money">即时价格：<span>127.5412</span></div>
+			</div>
+			<div class="showchart">
+				<div class="time">
+					<p>2017.11.30</p>
+					<p><i class="fa fa-refresh" aria-hidden="true"></i></p>
+				</div>
+				<canvas id="myChart" height="120"></canvas>
+				<ul class="choicetime">
+					<li>分钟</li>
+					<li>小时</li>
+					<li>日</li>
+					<li>周</li>
+					<li>月</li>
+					<li class="active" style="border-bottom-right-radius: 4px;">今日</li>
+				</ul>
+			</div>
+			<div class="myomeg">我持有的欧米伽证券：10.1223<br>价值：€ 1291.0102  </div>
+			<div class="mari">
+				<input type="text" class="mai_input" placeholder="请输入卖出金额">
+				<span class="max">MAX</span>
+				<p style="padding: .07rem 0 .1rem 0;">手续费 €1.2735 </p>
+				<a href="" class="maiout">卖出</a>
+			</div>
+
+		</section>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+	<script>
+//		图表
+        var data = {
+            labels : ["9am","10am","11am","12am","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm"],
+            datasets : [
+                {
+                    fillColor : "rgba(66,118,166,0.5)",
+                    strokeColor : "rgba(99,159,214,1)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    scaleFontSize : 10,
+                    pointDotRadius : 1,
+                    data : [20,60,120,180,240,100,120,60,120,180,240,200,120,180,40]
+                }
+            ]
+        }
+        var ctx = document.getElementById("myChart").getContext("2d");
+        new Chart(ctx).Line(data);
+
+		$(".choicetime li").click(function(){
+            $(".choicetime li").removeClass('active');
+            $(this).addClass('active');
+		})
+	</script>
+</html>

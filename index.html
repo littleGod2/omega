@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+		<style>
+			.container{
+				padding:0;
+				color: #fff;
+			}
+		</style>
+		<script src="js/chart.js"></script>
+	</head>
+	<body>
+		<header>
+			<span class="back"><img src="img/back.png" alt="" />
+			</span><span class="title">欧米伽资本</span>
+		</header>
+		<section class="container">
+			<section class="todayshou">
+				<div>
+					<span class="shouimg"><img src="img/shouimg.png" alt=""></span>
+					<span class="now">今日收入</span>
+				</div>
+				<div class="money">€131</div>
+			</section>
+			<ul class="date">
+				<li>
+					<p class="date_title">欧米伽</p>
+					<p class="num">€221.38</p>
+				</li>
+				<li>
+					<p class="date_title">激活码</p>
+					<p class="num">53</p>
+				</li>
+				<li>
+					<p class="date_title">置顶积分</p>
+					<p class="num">223.24</p>
+				</li>
+				<li>
+					<p class="date_title">欧米伽基金</p>
+					<p class="num">€15335.34</p>
+				</li>
+				<li>
+					<p class="date_title">欧米伽证券</p>
+					<p class="num">€6332.13</p>
+				</li>
+				<li>
+					<p class="date_title">欧米伽配套券</p>
+					<p class="num">32</p>
+				</li>
+			</ul>
+			<section class="talk">
+				<div class="tallimg"><img src="img/tall.png" alt=""></div>
+				<div class="not">
+					<ul id="notice">
+						<li>公告1</li>
+						<li>公告2</li>
+						<li>公告3</li>
+					</ul>
+				</div>
+			</section>
+			<ul class="function">
+				<li><a href=""><img src="img/index_01.gif" alt=""></a><br>购买配套</li>
+				<li><a href=""><img src="img/index_02.gif" alt=""></a><br>兑换配套</li>
+				<li><a href=""><img src="img/index_03.gif" alt=""></a><br>持有配套</li>
+				<li><a href=""><img src="img/index_04.gif" alt=""></a><br>个人中心</li>
+				<li><a href=""><img src="img/index_05.gif" alt=""></a><br>兑换礼品</li>
+				<li><a href=""><img src="img/index_06.gif" alt=""></a><br>我的礼品</li>
+				<li><a href=""><img src="img/index_07.gif" alt=""></a><br>兑汇申请</li>
+				<li><a href=""><img src="img/index_08.gif" alt=""></a><br>注册会员</li>
+				<li><a href=""><img src="img/index_09.gif" alt=""></a><br>我的团队</li>
+			</ul>
+			<div class="can_title">
+				<p class="c_t">本周证券</p>
+				<p><a href="" class="look">点击查看</a></p>
+			</div>
+			<canvas id="myChart" height="120"></canvas>
+			<div class="total">
+				<p class="time">2017.11.30</p>
+				<p class="total_num">€123<br><span>本周</span></p>
+			</div>
+			<p class="rate">今日汇率:<span>1:7.79</span></p>
+		</section>
+	</body>
+	<script type="text/javascript" src="js/index.js"></script>
+	<script>
+//		图表
+        var data = {
+            labels : ["9am","10am","11am","12am","1pm","2pm","3pm","4pm","5pm","6pm","7pm","8pm","9pm","10pm","11pm"],
+            datasets : [
+                {
+                    fillColor : "rgba(66,118,166,0.5)",
+                    strokeColor : "rgba(99,159,214,1)",
+                    pointColor : "rgba(220,220,220,1)",
+                    pointStrokeColor : "#fff",
+                    scaleFontSize : 10,
+                    pointDotRadius : 1,
+                    data : [20,60,120,180,240,100,120,60,120,180,240,200,120,180,40]
+                }
+            ]
+        }
+        var ctx = document.getElementById("myChart").getContext("2d");
+        new Chart(ctx).Line(data);
+
+//        向上滚动
+        function startmarquee(lh,speed,delay) {
+            var p=false;
+            var t;
+            var o=document.getElementById("notice");
+            o.innerHTML+=o.innerHTML;
+            o.style.marginTop=0;
+            o.onmouseover=function(){p=true;}
+            o.onmouseout=function(){p=false;}
+            function start(){
+                t=setInterval(scrolling,speed);
+                if(!p) o.style.marginTop=parseInt(o.style.marginTop)-1+"px";
+            }
+            function scrolling(){
+                if(parseInt(o.style.marginTop)%lh!=0){
+                    o.style.marginTop=parseInt(o.style.marginTop)-1+"px";
+                    if(Math.abs(parseInt(o.style.marginTop))>=o.scrollHeight/2) o.style.marginTop=0;
+                }else{
+                    clearInterval(t);
+                    setTimeout(start,delay);
+                }
+            }
+            setTimeout(start,delay);
+        }
+        startmarquee(20,20,1500); // 第一个参数为上升的高度，第二个为速度
+	</script>
+</html>

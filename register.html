@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css"/>
+    <style>
+        p{
+            color: #fff;
+            text-align: center;
+        }
+        .dui_title{
+            font-size:.15rem;
+            text-align: left;
+            margin:.14rem;
+        }
+        .dui_title span{
+            font-size:.16rem;
+            font-weight:600;
+            display: inline-block;
+            margin-bottom:.1rem;
+        }
+        .table{
+            width:2.9rem;
+            margin:.1rem auto;
+            font-size:.1rem;
+            color: #fff;
+            -webkit-box-shadow:0 10px 30px #2c2d3c;
+            -moz-box-shadow:0 10px 30px #2c2d3c;
+            box-shadow:0 10px 30px #2c2d3c;
+        }
+        .inte{
+            font-size:.22rem;
+            padding:.1rem;
+            border:1px solid #5a5c6b;
+        }
+        .table th{
+            border-left:1px solid #595b6c;
+            padding:.05rem;
+        }
+        .table th:first-child{
+            border-left:none;
+        }
+        .table td{
+            text-align: left;
+            border-left:1px solid #595b6c;
+            border-top:1px solid #595b6c;
+            padding:.02rem .01rem;
+        }
+        .table td:first-child{
+            border-left:none;
+        }
+        .myomeg{
+            border-top:1px solid #595b6c;
+            border-bottom:1px solid #595b6c;
+            font-size:.14rem;
+            padding:.15rem;
+            letter-spacing:1px;
+            color: #fff;
+        }
+        .mari{
+            padding:.15rem;
+            border-bottom:1px solid #595b6c;
+            margin-bottom:.2rem;
+            font-size:.18rem;
+            font-weight:600;
+            color: #fff;
+        }
+        .btn_m>a{
+            display: block;
+            width:1.1rem;
+            height:.26rem;
+            line-height:.26rem;
+            text-align: center;
+            background: #48b32f;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size:.13rem;
+            letter-spacing: 1px;
+            font-weight:600;
+        }
+        .clas_2{
+            padding-left:.1rem;
+        }
+        .clas_3{
+            padding-left:.2rem;
+        }
+        .dui_title{
+            font-size:.18rem;
+            font-weight:600;
+            text-align: left;
+            margin:.15rem;
+        }
+        .myteam{
+            border-radius: 4px;
+            margin:.2rem auto;
+            background: #00aced;
+            text-align: center;
+            padding:.05rem 0;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<header>
+        <span class="back"><img src="img/back.png" alt="" />
+        </span><span class="title">欧米伽资本</span>
+</header>
+<section>
+    <p class="inte">激活码：0</p>
+    <div class="myomeg"><div class="myteam">注册新会员 </div></div>
+    <div class="mari">导师：蒋大达</div>
+    <p class="dui_title">投资者：</p>
+    <section class="dui_list">
+        <table class="table" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td> 阿里奥(2) –配套46600 – 业绩335567 </td>
+            </tr>
+            <tr>
+                <td> <span class="clas_2">┗ </span>江地(1) –配套50000 – 业绩2312300 </td>
+            </tr>
+            <tr>
+                <td> <span class="clas_3">┗ </span>南岸(0) –配套32455 – 业绩0 </td>
+            </tr>
+            <tr>
+                <td> 东东(1) –配套32455 – 业绩231231 </td>
+            </tr>
+        </table>
+    </section>
+
+</section>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script>
+$(function(){
+    var tr = document.getElementsByTagName('tr')
+    for(var i=0;i<tr.length;i++){
+        if(i%2==0){
+            tr[i].style.background='#272836'
+        }
+    }
+
+    $('tr td span').each(function(){
+        if($(this).attr('class')=='clas_2' || $(this).attr('class')=='clas_3'){
+            $(this).parent().parent().css('color','#6e7189')
+        }
+    })
+})
+</script>
+</html>
